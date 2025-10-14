@@ -14,8 +14,3 @@ const newUser = new User({ name: 'Laila', age: 31 });
 newUser.save()
   .then(doc => console.log('User saved:', doc))
   .catch(err => console.error('Save error:', err.message));
-
-
-  User.create({ name: 'Omar', age: 22 })
-  .then(user => console.log('Added:', user))
-  .catch(err => console.error('Error:', err));
