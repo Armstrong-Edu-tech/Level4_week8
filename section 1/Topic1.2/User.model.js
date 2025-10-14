@@ -5,5 +5,4 @@ const userSchema = new mongoose.Schema({
   age: { type: Number, min: 18 },                   // must be at least 18
   createdAt: { type: Date, default: Date.now }      // auto-filled
 });
-
 const User = mongoose.model('User', userSchema);
