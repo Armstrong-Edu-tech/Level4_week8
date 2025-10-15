@@ -21,3 +21,6 @@ newPost.save().then(doc => console.log('Saved:', doc));
 
 
 
+postSchema.post('save', function(doc) {
+  console.log(`Post titled "${doc.title}" was saved at ${doc.createdAt}`);
+});
