@@ -18,3 +18,9 @@ const Post = mongoose.model('Post', postSchema);
 // Saving a new post
 const newPost = new Post({ title: 'My First Post' });
 newPost.save().then(doc => console.log('Saved:', doc));
+
+
+
+postSchema.post('save', function(doc) {
+  console.log(`Post titled "${doc.title}" was saved at ${doc.createdAt}`);
+});
